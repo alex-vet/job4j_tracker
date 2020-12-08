@@ -1,4 +1,4 @@
-package ru.job4j.inheritance.profession;
+package ru.job4j.oop.inheritance.profession;
 
 public class Programmer extends Engineer {
     private int countBugs;

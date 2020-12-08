@@ -1,4 +1,4 @@
-package ru.job4j.inheritance.shop;
+package ru.job4j.oop.inheritance.shop;
 
 public class Shop {
     public static void main(String[] args) {
