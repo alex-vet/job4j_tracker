@@ -7,6 +7,14 @@ public class Profession {
     private String education;
     private Short experience;
 
+    public Profession(String name, String surname, String patronymic, String education, Short experience) {
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.education = education;
+        this.experience = experience;
+    }
+
     public String getName() {
         return name;
     }
