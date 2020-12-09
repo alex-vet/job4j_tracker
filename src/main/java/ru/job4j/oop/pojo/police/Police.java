@@ -1,4 +1,4 @@
-package ru.job4j.oop.pojo;
+package ru.job4j.oop.pojo.police;
 
 import java.util.Date;
 

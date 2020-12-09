@@ -1,4 +1,4 @@
-package ru.job4j.oop.pojo;
+package ru.job4j.oop.pojo.college;
 
 import java.util.Date;
 
