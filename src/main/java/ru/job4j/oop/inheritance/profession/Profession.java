@@ -7,7 +7,8 @@ public class Profession {
     private String education;
     private Short experience;
 
-    public Profession(String name, String surname, String patronymic, String education, Short experience) {
+    public Profession(String name, String surname, String patronymic,
+                      String education, Short experience) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;

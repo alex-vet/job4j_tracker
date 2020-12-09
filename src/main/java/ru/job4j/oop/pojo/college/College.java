@@ -9,6 +9,7 @@ public class College {
         ivanov.setGroup("RD-101");
         ivanov.setAddmission(new Date());
 
-        System.out.println("Student " + ivanov.getFio() + " entered college " + ivanov.getAddmission() + " in group - " + ivanov.getGroup());
+        System.out.println("Student " + ivanov.getFio() + " entered college "
+                + ivanov.getAddmission() + " in group - " + ivanov.getGroup());
     }
 }
