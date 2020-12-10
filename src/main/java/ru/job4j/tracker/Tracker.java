@@ -29,27 +29,20 @@ public class Tracker {
         return rsl;
     }
 
-    public Item findByName(String name) {
-        Item rsl = null;
+    public Item[] findByName(String name) {
+        int newSize = 0;
+        Item[] rsl = new Item[size];
         for (int index = 0; index < size; index++) {
             Item item = items[index];
             if (name.equals(item.getName())) {
-                rsl = item;
-                break;
-            }
-        }
-        return rsl;
-    }
-
-    public Item[] findAll() {
-        int newSize = 0;
-        Item[] rsl = new Item[size];
-        for (Item itm : items) {
-            if (itm != null) {
-                rsl[newSize++] = itm;
+                rsl[newSize++] = item;
             }
         }
         return Arrays.copyOf(rsl,newSize);
+    }
+
+    public Item[] findAll() {
+        return Arrays.copyOf(items,size);
     }
 
     public boolean replace(int id, Item item) {
