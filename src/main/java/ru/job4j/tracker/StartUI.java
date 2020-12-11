@@ -11,7 +11,7 @@ public class StartUI {
             } else if (select == 1) {
                 StartUI.findAllItems(input, tracker);
             } else if (select == 2) {
-                StartUI.editItem(input, tracker);
+                StartUI.replaceItem(input, tracker);
             } else if (select == 3) {
                 StartUI.deleteItem(input, tracker);
             } else if (select == 4) {
@@ -56,15 +56,15 @@ public class StartUI {
         }
     }
 
-    public static void editItem(Input input, Tracker tracker) {
+    public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit Item ====");
         int id = input.askInt("Enter id Item for replace: ");
         String name = input.askStr("Enter name for new Item: ");
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
-            System.out.println("Item was added.");
+            System.out.println("Item was replaced.");
         } else {
-            System.out.println("Cannot add Item.");
+            System.out.println("Cannot replace Item.");
         }
     }
 
