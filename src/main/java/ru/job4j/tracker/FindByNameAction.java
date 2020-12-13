@@ -21,10 +21,9 @@ public class FindByNameAction implements IUserAction {
             for (Item itm : items) {
                 out.println(itm.toString());
             }
-            return true;
         } else {
             out.println("Items with name=" + name + " not found.");
-            return false;
         }
+        return true;
     }
 }

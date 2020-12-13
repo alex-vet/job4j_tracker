@@ -18,10 +18,9 @@ public class DeleteAction implements IUserAction {
         int id = input.askInt("Enter id Item for delete: ");
         if (tracker.delete(id)) {
             out.println("Item was deleted.");
-            return true;
         } else {
             out.println("Cannot delete Item.");
-            return false;
         }
+        return true;
     }
 }

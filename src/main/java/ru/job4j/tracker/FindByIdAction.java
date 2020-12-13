@@ -19,10 +19,9 @@ public class FindByIdAction implements IUserAction {
         Item itm = tracker.findById(id);
         if (itm != null) {
             out.println(itm.toString());
-            return true;
         } else {
             out.println("Item with id=" + id + " not found.");
-            return false;
         }
+        return true;
     }
 }

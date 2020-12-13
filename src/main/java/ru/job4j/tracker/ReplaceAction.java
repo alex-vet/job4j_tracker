@@ -20,10 +20,9 @@ public class ReplaceAction implements IUserAction {
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
             out.println("Item was replaced.");
-            return true;
         } else {
             out.println("Cannot replace Item.");
-            return false;
         }
+        return true;
     }
 }
