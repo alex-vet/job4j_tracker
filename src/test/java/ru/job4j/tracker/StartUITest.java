@@ -98,18 +98,23 @@ public class StartUITest {
     public void whenFindById() {
         IOutput out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", "1"}
+                new String[] {"0", "1", "1"}
         );
         Tracker tracker = new Tracker();
         IUserAction[] actions = {
-                new FindByIdAction(out)
+                new FindByIdAction(out),
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
                 "Menu." + System.lineSeparator() +
                         "0. Find Item by Id" + System.lineSeparator() +
+                        "1. Exit" + System.lineSeparator() +
                         "=== Find Item by Id ====" + System.lineSeparator() +
-                        "Item with id=1 not found." + System.lineSeparator()
+                        "Item with id=1 not found." + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
+                        "0. Find Item by Id" + System.lineSeparator() +
+                        "1. Exit" + System.lineSeparator()
         ));
     }
 
@@ -117,18 +122,23 @@ public class StartUITest {
     public void whenFindByName() {
         IOutput out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", "name"}
+                new String[] {"0", "name", "1"}
         );
         Tracker tracker = new Tracker();
         IUserAction[] actions = {
-                new FindByNameAction(out)
+                new FindByNameAction(out),
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
                 "Menu." + System.lineSeparator() +
                         "0. Find Items by name" + System.lineSeparator() +
+                        "1. Exit" + System.lineSeparator() +
                         "=== Find Items by Name ====" + System.lineSeparator() +
-                        "Items with name=name not found." + System.lineSeparator()
+                        "Items with name=name not found." + System.lineSeparator() +
+                        "Menu." + System.lineSeparator() +
+                        "0. Find Items by name" + System.lineSeparator() +
+                        "1. Exit" + System.lineSeparator()
         ));
     }
 }
