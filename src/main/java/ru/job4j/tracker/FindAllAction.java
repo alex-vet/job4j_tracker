@@ -13,7 +13,7 @@ public class FindAllAction implements IUserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(IInput input, Tracker tracker) {
         out.println("=== Show all Items ====");
         Item[] items = tracker.findAll();
         for (Item itm : items) {

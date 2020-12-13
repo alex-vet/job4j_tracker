@@ -7,7 +7,7 @@ public class Exit implements IUserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(IInput input, Tracker tracker) {
         return false;
     }
 }

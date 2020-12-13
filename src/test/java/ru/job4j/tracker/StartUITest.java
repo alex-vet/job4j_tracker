@@ -9,7 +9,7 @@ public class StartUITest {
     @Test
     public void whenCreateItem() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
@@ -27,7 +27,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
         IUserAction[] actions = {
@@ -43,7 +43,7 @@ public class StartUITest {
         IOutput out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
         IUserAction[] actions = {
@@ -57,7 +57,7 @@ public class StartUITest {
     @Test
     public void whenExit() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0"}
         );
         Tracker tracker = new Tracker();
@@ -74,7 +74,7 @@ public class StartUITest {
     @Test
     public void whenFindAll() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", "1"}
         );
         Tracker tracker = new Tracker();
@@ -97,7 +97,7 @@ public class StartUITest {
     @Test
     public void whenFindById() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", "1", "1"}
         );
         Tracker tracker = new Tracker();
@@ -121,7 +121,7 @@ public class StartUITest {
     @Test
     public void whenFindByName() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[] {"0", "name", "1"}
         );
         Tracker tracker = new Tracker();
@@ -145,7 +145,7 @@ public class StartUITest {
     @Test
     public void whenInvalidExit() {
         IOutput out = new StubOutput();
-        Input in = new StubInput(
+        IInput in = new StubInput(
                 new String[]{"1", "0"}
         );
         Tracker tracker = new Tracker();

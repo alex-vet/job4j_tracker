@@ -13,7 +13,7 @@ public class FindByNameAction implements IUserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(IInput input, Tracker tracker) {
         out.println("=== Find Items by Name ====");
         String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);

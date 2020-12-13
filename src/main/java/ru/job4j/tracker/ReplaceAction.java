@@ -13,7 +13,7 @@ public class ReplaceAction implements IUserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(IInput input, Tracker tracker) {
         out.println("=== Edit Item ====");
         int id = input.askInt("Enter id Item for replace: ");
         String name = input.askStr("Enter name for new Item: ");
