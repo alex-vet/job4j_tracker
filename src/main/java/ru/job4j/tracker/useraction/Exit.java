@@ -1,4 +1,7 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.useraction;
+
+import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.input.IInput;
 
 public class Exit implements IUserAction {
     @Override

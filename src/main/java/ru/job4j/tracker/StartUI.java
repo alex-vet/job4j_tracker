@@ -1,5 +1,12 @@
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.input.ConsoleInput;
+import ru.job4j.tracker.input.IInput;
+import ru.job4j.tracker.input.ValidateInput;
+import ru.job4j.tracker.output.ConsoleOutput;
+import ru.job4j.tracker.output.IOutput;
+import ru.job4j.tracker.useraction.*;
+
 public class StartUI {
     private final IOutput out;
 

@@ -1,4 +1,9 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.useraction;
+
+import ru.job4j.tracker.Item;
+import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.input.IInput;
+import ru.job4j.tracker.output.IOutput;
 
 public class ReplaceAction implements IUserAction {
     private final IOutput out;
