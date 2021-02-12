@@ -43,7 +43,7 @@ public class Matches {
         return remain;
     }
 
-    private static boolean checkWin(int count,String player) {
+    private static boolean checkWin(int count, String player) {
         if (count == 0) {
             System.out.println("The player " + player + " has won!");
             return false;

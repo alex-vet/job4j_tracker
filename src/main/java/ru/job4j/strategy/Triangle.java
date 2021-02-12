@@ -1,10 +1,10 @@
 package ru.job4j.strategy;
 
-public class Triangle implements IShape{
+public class Triangle implements IShape {
     @Override
     public String draw() {
         String ln = System.lineSeparator();
-        return    "   ^    " + ln
+        return "   ^    " + ln
                 + " /   \\ " + ln
                 + "/_____\\" + ln;
     }

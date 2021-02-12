@@ -1,10 +1,10 @@
 package ru.job4j.strategy;
 
-public class Square implements IShape{
+public class Square implements IShape {
     @Override
     public String draw() {
         String ln = System.lineSeparator();
-        return    "--------" + ln
+        return "--------" + ln
                 + "|      |" + ln
                 + "________" + ln;
     }

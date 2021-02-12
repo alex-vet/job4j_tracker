@@ -1,7 +1,7 @@
 package ru.job4j.oop.cast.college;
 
 public class College {
-    Freshman fresh = new Freshman();
-    Student st = fresh;
-    Object obj = st;
+    private Freshman fresh = new Freshman();
+    private Student st = fresh;
+    private Object obj = st;
 }

@@ -1,4 +1,4 @@
-package ru.job4j.ex.UserStore;
+package ru.job4j.ex.userstore;
 
 public class User {
     private String username;
