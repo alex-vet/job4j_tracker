@@ -1,4 +1,4 @@
-package ru.job4j.collection.search;
+package ru.job4j.collection.search.phonedictionary;
 
 import java.util.ArrayList;
 

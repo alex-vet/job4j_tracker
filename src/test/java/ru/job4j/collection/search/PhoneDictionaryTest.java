@@ -1,6 +1,9 @@
 package ru.job4j.collection.search;
 
 import org.junit.Test;
+import ru.job4j.collection.search.phonedictionary.Person;
+import ru.job4j.collection.search.phonedictionary.PhoneDictionary;
+
 import static org.hamcrest.Matchers.is;
 import java.util.ArrayList;
 
