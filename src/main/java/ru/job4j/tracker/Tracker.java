@@ -3,9 +3,20 @@ package ru.job4j.tracker;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tracker {
+public final class Tracker {
+    private static  Tracker instance = null;
     private final List<Item> items = new ArrayList<>();
     private int ids = 1;
+
+    private Tracker() {
+    }
+
+    public static Tracker getInstance() {
+        if (instance == null) {
+            instance = new Tracker();
+        }
+        return instance;
+    }
 
     public Item add(Item item) {
         item.setId(ids++);
