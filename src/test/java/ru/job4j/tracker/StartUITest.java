@@ -50,7 +50,8 @@ public class StartUITest {
         actions.add(new ReplaceAction(out));
         actions.add(new Exit());
         new StartUI(out).init(in, tracker, actions);
-        assertThat(Objects.requireNonNull(tracker.findById(item.getId())).getName(), is(replacedName));
+        assertThat(Objects.requireNonNull(tracker.findById(item.getId())).getName(),
+                is(replacedName));
     }
 
     @Test
