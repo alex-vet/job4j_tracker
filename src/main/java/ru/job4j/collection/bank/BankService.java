@@ -38,8 +38,12 @@ public class BankService {
         User user = findByPassport(passport);
         if (user != null) {
             List<Account> accounts = users.get(user);
-            int index = accounts.indexOf(new Account(requisite, -1));
-            find = accounts.get(index);
+            for (Account account : accounts) {
+                if (account.getRequisite().equals(requisite)) {
+                    find = account;
+                    break;
+                }
+            }
         }
         return find;
     }
