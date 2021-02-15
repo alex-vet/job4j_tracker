@@ -1,12 +1,12 @@
-package ru.job4j.collection.passport;
+package ru.job4j.collection.bank;
 
 import java.util.Objects;
 
-public class Citizen {
+public class User {
     private String passport;
     private String username;
 
-    public Citizen(String passport, String username) {
+    public User(String passport, String username) {
         this.passport = passport;
         this.username = username;
     }
@@ -15,8 +15,16 @@ public class Citizen {
         return passport;
     }
 
+    public void setPassport(String passport) {
+        this.passport = passport;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -27,8 +35,8 @@ public class Citizen {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Citizen citizen = (Citizen) o;
-        return Objects.equals(passport, citizen.passport);
+        User user = (User) o;
+        return Objects.equals(passport, user.passport);
     }
 
     @Override
